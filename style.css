@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: #1a1a1a;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background: #2c2c2c;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.nav-links a {
+    position: relative;
+    margin-left: 2rem;
+    text-decoration: none;
+    color: #e0e0e0;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00b7eb;
+}
+
+.nav-links a::after {
+    content: attr(data-hover);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.nav-links a:hover::after {
+    opacity: 1;
+}
+
+.nav-links a:hover:not(:after) {
+    opacity: 0;
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    background: linear-gradient(135deg, #1e3a8a, #4c1d95);
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #2c2c2c;
+    color: #00b7eb;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    color: #e0e0e0;
+}
+
+.btn::after {
+    content: attr(data-hover);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn:hover::after {
+    opacity: 1;
+}
+
+.btn:hover:not(:after) {
+    opacity: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #00b7eb;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 50%;
+    max-width: 300px;
+    border: 2px solid #00b7eb;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #2c2c2c;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    position: relative;
+    display: inline-block;
+    color: #e0e0e0;
+}
+
+.project-info h3::after {
+    content: attr(data-hover);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: #00b7eb;
+}
+
+.project-info h3:hover::after {
+    opacity: 1;
+}
+
+.project-info h3:hover:not(:after) {
+    opacity: 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    text-align: center;
+}
+
+.skill {
+    position: relative;
+    padding: 1rem;
+    background: #2c2c2c;
+    border-radius: 5px;
+    color: #e0e0e0;
+    transition: background 0.3s, color 0.3s;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.skill:hover {
+    background: #00b7eb;
+    color: transparent; /* Hide original text color on hover */
+}
+
+.skill::after {
+    content: attr(data-hover);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: #1a1a1a; /* Match hover text color */
+}
+
+.skill:hover::after {
+    opacity: 1;
+}
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+    padding: 0.8rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #2c2c2c;
+    color: #e0e0e0;
+}
+
+.contact button {
+    position: relative;
+    padding: 0.8rem;
+    background: #00b7eb;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.contact button:hover {
+    background: #e0e0e0;
+    color: #1a1a1a;
+}
+
+.contact button::after {
+    content: attr(data-hover);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.contact button:hover::after {
+    opacity: 1;
+}
+
+.contact button:hover:not(:after) {
+    opacity: 0;
+}
+
+.contact a, .social a {
+    position: relative;
+    display: inline-block;
+    margin-right: 1rem;
+    color: #00b7eb;
+    text-decoration: none;
+}
+
+.contact a:hover, .social a:hover {
+    color: #e0e0e0;
+}
+
+.contact a::after, .social a::after {
+    content: attr(data-hover);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.contact a:hover::after, .social a:hover::after {
+    opacity: 1;
+}
+
+.contact a:hover:not(:after), .social a:hover:not(:after) {
+    opacity: 0;
+}
+
+footer {
+    background: #2c2c2c;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

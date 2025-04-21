@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utkarsh Dubey - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Utkarsh Dubey</div>
+            <div class="nav-links">
+                <a href="#home" data-hover="Go Home">Home</a>
+                <a href="#about" data-hover="Know Me">About</a>
+                <a href="#projects" data-hover="View Work">Projects</a>
+                <a href="#skills" data-hover="My Expertise">Skills</a>
+                <a href="#contact" data-hover="Reach Out">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm Utkarsh Dubey, a passionate developer creating innovative solutions</p>
+            <a href="#contact" class="btn" data-hover="Connect Now">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="dp.jpeg" alt="Utkarsh Dubey">
+                </div>
+                <div>
+                    <p>Hello! I'm Utkarsh Dubey, a 20-year-old student pursuing an Integrated Master of Computer Applications (IMCA). I'm passionate about technology, particularly in the areas of Web Development, Data Structures & Algorithms (using C++), and Java Programming. I love building projects that solve real problems and enhance learning experiences for students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="es.jpg" alt="EduSync">
+                    <div class="project-info">
+                        <h3 data-hover="Student App">EduSync</h3>
+                        <p>EduSync is a React Native mobile app designed for students to get real-time lecture schedule updates. It ensures you stay informed and never miss a class.</p>
+                        <a href="https://github.com/iuttkarshh0409/EduSync" target="_blank" class="btn" data-hover="Explore Code">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="ae2.jpg" alt="Acronym Explorer">
+                    <div class="project-info">
+                        <h3 data-hover="CS Tool">Acronym Explorer</h3>
+                        <p>Acronym Explorer is a web app that helps users find the full forms of commonly used acronyms in Computer Science quickly and efficiently.</p>
+                        <a href="https://github.com/iuttkarshh0409/Acronym-Explorer" target="_blank" class="btn" data-hover="Explore Code">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill" data-hover="Problem Solving">C++</div>
+                <div class="skill" data-hover="OOP Master">Java</div>
+                <div class="skill" data-hover="Web Dev">JavaScript</div>
+                <div class="skill" data-hover="Database Query">SQL</div>
+                <div class="skill" data-hover="Mobile Apps">React Native</div>
+                <div class="skill" data-hover="Backend">Node.js</div>
+                <div class="skill" data-hover="Database">MySQL</div>
+                <div class="skill" data-hover="Version Control">Git & GitHub</div>
+                <div class="skill" data-hover="Efficient Code">Data Structures</div>
+                <div class="skill" data-hover="Optimization">Algorithms</div>
+                <div class="skill" data-hover="Data Management">DBMS</div>
+                <div class="skill" data-hover="Analytics">Probability & Statistics</div>
+                <div class="skill" data-hover="Finance">Financial Accounting</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact">
+                <div id="contact-form">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" onclick="sendMessage()" data-hover="Send Now">Send Message</button>
+                </div>
+                <p>Email: <a href="mailto:dubeyutkarsh101@gmail.com" data-hover="Send Email">dubeyutkarsh101@gmail.com</a></p>
+                <div class="social">
+                    <a href="https://github.com/iuttkarshh0409" target="_blank" data-hover="My Code">GitHub</a>
+                    <a href="https://www.linkedin.com/in/utkarsh-dubey-227098352/" target="_blank" data-hover="Connect">LinkedIn</a>
+                    <a href="https://www.instagram.com/_iutkarsh7_/" target="_blank" data-hover="Follow Me">Instagram</a>
+                    <a href="https://x.com/iuttkarshh0409" target="_blank" data-hover="Tweet Me">X (Twitter)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Utkarsh Dubey. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
